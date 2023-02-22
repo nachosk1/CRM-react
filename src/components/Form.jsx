@@ -1,30 +1,32 @@
-const Form = ({cliente}) => {
+const Form = ({client}) => {
     return (
         <>
             <div className="mb-4">
                 <label
                     className="text-gray-800"
-                    htmlFor="nombre"
+                    htmlFor="name"
                 >Nombre:</label>
                 <input 
-                    id="nombre"
+                    id="name"
                     type="text"
                     className="mt-2 block w-full p-3 bg-gray-50"
                     placeholder="Nombre del Cliente"
-                    name="nombre"
+                    name="name"
+                    defaultValue={client?.name}
                 />
             </div>
             <div className="mb-4">
                 <label
                     className="text-gray-800"
-                    htmlFor="empresa"
+                    htmlFor="company"
                 >Empresa:</label>
                 <input 
-                    id="empresa"
+                    id="company"
                     type="text"
                     className="mt-2 block w-full p-3 bg-gray-50"
                     placeholder="Empresa del Cliente"
-                    name="empresa"
+                    name="company"
+                    defaultValue={client?.company}
                 />
             </div>
 
@@ -39,35 +41,38 @@ const Form = ({cliente}) => {
                     className="mt-2 block w-full p-3 bg-gray-50"
                     placeholder="Email del Cliente"
                     name="email"
+                    defaultValue={client?.email}
                 />
             </div>
 
             <div className="mb-4">
                 <label
                     className="text-gray-800"
-                    htmlFor="telefono"
+                    htmlFor="phone"
                 >Teléfono:</label>
                 <input 
-                    id="telefono"
+                    id="phone"
                     type="tel"
                     className="mt-2 block w-full p-3 bg-gray-50"
                     placeholder="Teléfono del Cliente"
-                    name="telefono"
+                    name="phone"
+                    defaultValue={client?.phone}
                 />
             </div>
 
             <div className="mb-4">
                 <label
                     className="text-gray-800"
-                    htmlFor="notas"
+                    htmlFor="grades"
                 >Notas:</label>
                 <textarea
                     as="textarea"
-                    id="notas"
+                    id="grades"
                     type="text"
                     className="mt-2 block w-full p-3 bg-gray-50 h-40 align-self"
                     placeholder="Notas del Cliente"
-                    name="notas"
+                    name="grades"
+                    defaultValue={client?.grades}
                 />
             </div>
         </>
